@@ -1,0 +1,79 @@
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,th,var,optgroup{font-style:inherit;font-weight:inherit;}del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{font-size:100%;}
+a {outline: none;} /* Gets rid of Firefox's dotted borders */
+a img {border: none;} /* Gets rid of IE's blue borders */
+
+html {
+	min-height: 100%;
+	background: #87e0fd; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #87e0fd 0%, #53cbf1 13%, #1805c4 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#87e0fd), color-stop(13%,#53cbf1), color-stop(100%,#1805c4)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg,  #87e0fd 0%,#53cbf1 13%,#1805c4 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg,  #87e0fd 0%,#53cbf1 13%,#1805c4 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg,  #87e0fd 0%,#53cbf1 13%,#1805c4 100%); /* IE10+ */
+background: linear-gradient(-45deg,  #87e0fd 0%,#53cbf1 13%,#1805c4 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#1805c4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+	font-family: "Segoe UI", Helvetica, Arial;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+
+#main {
+	width: 780px;
+	margin: 0 auto;
+}
+
+#header {
+	height: 74px;
+}
+
+#block {
+	width: 200px;
+	float: left;
+	height: 90px;
+}
+
+#spacer {
+	height: 100px;
+	float: left;
+}
+
+#logo {
+	float: left;
+	width: 200px;
+	text-align: center;
+	height: 90px;
+	margin-right: 200px;
+}
+
+h2 {
+	border-bottom: 3px double #EBEBEB;
+}
+
+.clear {
+	clear: both;
+}
+
+.link {
+	float: left;
+	height: 30px;
+	margin-right: 20px;
+	-moz-text-shadow: 2px 2px 2px #888;
+	-webkit-text-shadow: 2px 2px 2px #888;
+	text-shadow: 2px 2px 2px #888;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+	transition: color 0.2s linear;
+	-webkit-transition: color 0.2s linear;
+	-moz-transition: color 0.2s linear;
+	-o-transition: color 0.2s linear;
+}
+
+a:hover {
+	color: #fff;
+}
+
