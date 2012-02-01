@@ -11,16 +11,23 @@
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="bootstrap-scrollspy.js"></script>
+
+		<script>
+			$(document).ready(function () {
+				$('#topbar').scrollspy()
+			})
+		</script>
 	</head>
 
-	<body>
+	<body data-spy="scroll">
 
 		<div class="topbar">
 			<div class="fill">
 				<div class="container">
 					<a class="brand" href="#">Kevin Hwang</a>
 					<ul class="nav">
-						<li><a href="#">Home</a></li>
+						<li><a href="#about">Home</a></li>
 						<li><a href="#projects">Projects</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
@@ -48,14 +55,22 @@
 		<br>
 		<div id="projects" class="container">
 			<div class="page-header">
-				<a name="projects"><h1>Projects
+				<h1>Projects
 					<small>Both big and small</small>
-				</h1></a>
+				</h1>
 			</div>
 
 			<div class="row">
 				<div class="span12">
 					<p>I have a GitHub <a href="https://github.com/khwang">page</a> on which most of my projects are stored. Below is a list of notable projects along with summaries of each one.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="span4"><a href="https://github.com/khwang/MySite"><img src="myself.png"></a></div>
+				<div class="span8">
+					<h3>My Personal Website<h3>
+					<p>How self-referential! This website is the result of me familiarizing myself with Twitter Bootstrap. <a href="https://github.com/khwang/MySite">&#8594;</a></p>
 				</div>
 			</div>
 
@@ -97,15 +112,16 @@
 
 		<div id="contact" class="container">
 			<div class="page-header">
-				<a name="contact"><h1>Contact Me
+				<h1>Contact Me
 					<small>I'm not contagious</small>
-				</h1></a>
+				</h1>
 			</div>
 
 			<div class="row">
 				<div class="span12">
 					<p>You can reach me through a myriad of ways. Choose any and all that are convenient for you.</p>
 			
+					
 					<ul>
 						<li><a href="https://www.facebook.com/k3vinhwang">Facebook</a></li>
 						<li><a href="http://www.linkedin.com/in/k3vinhwang">LinkedIn</a></li>
@@ -114,9 +130,11 @@
 						<li><a href="mailto:k3vinhwang@gmail.com">E-mail</a></li>
 
 					</ul>
+
 			
 
 					<p>I also have a resume available as a <a href="resume.pdf">PDF</a>.</p>
+					
 				</div>
 			</div>
 
