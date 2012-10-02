@@ -1,0 +1,3 @@
+[submodule "strawberry"]
+	path = strawberry
+	url = git@github.com:khwang/strawberry.git
