@@ -1,8 +1,9 @@
-\documentclass[11pt,a4paper]{moderncv}
+\documentclass[8pt,a4paper]{moderncv}
 
 % Themes
 \moderncvstyle{casual}
 \moderncvcolor{blue}
+\usepackage[scale=0.8, top=1cm, bottom=3cm]{geometry}
 
 % Personal data
 \firstname {Kevin}
@@ -19,35 +20,45 @@
 \begin{document}
 \makecvtitle
 
+\vspace*{-2\baselineskip}
+
 \section{Education}
-\cventry{2009--2012}{Bachelor of Science in Electrical Engineering and Computer Sciences}{University of California, Berkeley}{Berkeley}{}{Overall GPA: 3.385}
+%\cventry{2009 to 2012}{Bachelor of Science in Electrical Engineering and Computer Sciences}{University of California Berkeley}{\textit{Grade}}{Description}
+\cventry{2009-2012}{Bachelor of Science in Electrical Engineering and Computer Sciences}{University of California, Berkeley}{Berkeley}{}{Overall GPA: 3.385}
 
 \section{Work}
-\cventry{Summer 2012--Present}{Software Engineer}{Scribd}{San Francisco}{}{As a generalist, I work on projects touching all aspects of the codebase. \newline{}
-\begin{itemize}
-\item Ads team
-\item "Save for Later" feature
-\item Implemented a front-end Javascript testing framework for our continuous integration loop.
-\end {itemize}
-}
+\cventry{Summer 2012-Present}{Scribd, Inc.}{Software Engineer}{San Francisco}{}{As a generalist, I work on projects touching all aspects of the codebase.}
 
-\cventry{Fall 2011}{Undergraduate Teaching Assistant: CS61A}{University of California, Berkeley}{Berkeley, CA}{}{I instructed students in the introductory course in computer science by leading a discussion section and a lab section. I also wrote and graded the examples.{}
-}
+\cventry{Summer 2011}{University of California, Berkeley}{Undergraduate Teaching Assistant}{Berkeley}{}{I instructed students in the introductory course in computer science by leading a discussion section and a lab section. I also wrote and graded the exams.}
 
 \section{Projects}
-\cventry{September 2012}{Strawberry}{}{}{}{A music visualizer utilizing the HTML5 Audio API and WebGL through the ThreeJS library. Third place winner at the Berkeley HackJam Fall 2012.{}
-}
-\cventry{February 2011}{Currant}{}{}{}{Collaborative reading with video. Upload an epub and read together.{}
-}
-\cventry{Fall 2011}{Write Better With Us}{}{}{}{Using machine learning and natural language processing to improve your writing.{}
-}
+\cventry{September 2012}{Strawberry}{A music visualizer utilizing the HTML5 Audio API and ThreeJS, for WebGL. Third place winner at HackJam Fall 2012.}{}{}{https://github.com/khwang/strawberry}
 
+\cventry{February 2011}{Currant}{Collaborative reading with video. Upload an epub and read together.}{}{}{https://github.com/CSUA/ajay-hackathon-project}
+
+\cventry{November 2011}{Write Better With Us}{Use machine learning and natural language processing to improve your writing.}{}{}{https://github.com/AjayTripathy/kiwi}
+
+\cventry{September 2011}{DJS}{A real-time media distribution framework built on top of NodeJS and NowJS. Fourth place winner at Yahoo! Hack.}{}{}{https://github.com/khwang/DJS}
 
 \section{Activities}
-\cvitem{Eta Kappa Nu Honors Society}{National electrical engineering honors society}
-\cvitem{Computer Science Undergraduate Association}{}
-\cvitem{Lindy on Sproul}{Swing dancing instructor, performer, and website coordinator.}
-\cvitem{Hackers at Berkeley}{Founding officer for a club that promotes hacking culture}
+
+\cventry{}{Eta Kappa Nu Honors Society}{}{}{}{}
+
+\cventry{}{Computer Science Undergraduate Association}{}{}{}{}
+
+\cventry{}{Lindy on Sproul}{Swing dancing instructor, performer, and website coordinator}{}{}{}
+
+\cventry{}{Hackers at Berkeley}{Founding officer for a club that promotes hacking culture}{}{}{}
+
+\cventry{}{Berkeley Dancer's Den}{Web Designer}{}{}{}
 
 \section{Skills}
+\cventry{}{Languages}{}{}{}{\begin{itemize}
+		\item Preferred: Javascript, Python, HTML5/CSS3, Scheme, Ruby
+		\item Familiarity: CoffeeScript, Java, C, C++
+	\end{itemize}}{}
+	
+\cventry{}{Frameworks}{}{}{}{NodeJS, Socket.IO, jQuery, Web.py, Ruby on Rails, Backbone.JS}{}
 \end{document}
+
+\vspace*{-2\baselineskip}
