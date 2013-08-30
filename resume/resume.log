@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  29 AUG 2013 22:43
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  29 AUG 2013 23:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -988,6 +988,17 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 27.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 27.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 35.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 35.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 35.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 35.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/microtype/mt-mvs.cfg
 File: mt-mvs.cfg 2006/07/05 v1.1 microtype config. file: Marvosym Euro (RS)
@@ -1019,11 +1030,11 @@ Package rerunfilecheck Info: File `resume.out' has not changed.
 (rerunfilecheck)             Checksum: 253D670EE96C43D2C87AF38AF433963F;400.
  ) 
 Here is how much of TeX's memory you used:
- 21554 strings out of 493633
- 377677 string characters out of 3143378
- 507619 words of memory out of 3000000
- 24420 multiletter control sequences out of 15000+200000
- 46265 words of font info for 54 fonts, out of 3000000 for 9000
+ 21631 strings out of 493633
+ 378896 string characters out of 3143378
+ 509184 words of memory out of 3000000
+ 24482 multiletter control sequences out of 15000+200000
+ 57536 words of font info for 66 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  77i,14n,85p,768b,930s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
@@ -1034,11 +1045,12 @@ ype1/public/lm/lmr12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public
 /lm/lmr17.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/lm/lmro10.
 pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/lm/lmro17.pfb></usr/
 local/texlive/2011/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texl
-ive/2011/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb>
-Output written on resume.pdf (1 page, 182119 bytes).
+ive/2011/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2011/t
+exmf-dist/fonts/type1/public/marvosym/marvosym.pfb>
+Output written on resume.pdf (1 page, 206029 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 88 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
  7 named destinations out of 1000 (max. 500000)
- 12341 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 15925 words of extra memory for PDF output out of 17280 (max. 10000000)
 
