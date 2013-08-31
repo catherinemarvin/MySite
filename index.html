@@ -2,45 +2,46 @@
   <head>
     <meta charset="utf-8">
     <title>Kevin Hwang - About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Kevin Hwang's personal website">
-    <meta name="author" content="">
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <meta name="author" content="Kevin Hwang">
+    <link href="bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="master.css" />
     <!--HTML5 shim. Hacky, but fun!-->
     <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="bootstrap-scrollspy.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        $('#topbar').scrollspy()
-      })
-    </script>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
 
     <script type="text/javascript">
       //dat google analytics
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-29616727-1']);
-      _gaq.push(['_trackPageview']);
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29616727-1']);
+    _gaq.push(['_trackPageview']);
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
 
-    </script>
+</script>
   </head>
 
-  <body data-spy="scroll">
-
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="#">Kevin Hwang</a>
-          <ul class="nav">
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Kevin Hwang</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
             <li><a href="#about">Home</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -49,50 +50,65 @@
       </div>
     </div>
 
-    <div id="about" class="container">
-      <div class="page-header">
-        <h1>About Me
-          <small>The real deal</small>
-        </h1>
+    <div class="container marketing">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h1>About Me
+              <small>The real deal</small>
+            </h1>
+          </div>
+        </div>
       </div>
 
       <div class="row">
-        <div class="span12">
+        <div class="col-lg-12">
           <p>Hello, I'm Kevin. I'm a programmer specializing in web development. I've just graduated with a degree in Electrical Engineering and Computer Science from the University of California, Berkeley. I'm currently a software engineer at <a href="http://www.scribd.com/">Scribd</a>.</p> 
 
           <p>When I'm not coding, you can find me climbing rocks indoors, swing dancing both for fun and for show, drawing, composing, or playing instruments.</p>
         </div>
       </div>
 
-    </div>
-    <br>
-    <br>
-    <div id="projects" class="container">
-      <div class="page-header">
-        <h1>Projects
-          <small>Both big and small</small>
-        </h1>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h1>Projects
+              <small>Both big and small</small>
+            </h1>
+          </div>
+        </div>
       </div>
 
       <div class="row">
-        <div class="span12">
+        <div class="col-lg-12">
           <p>I have a GitHub <a href="https://github.com/khwang">page</a> on which most of my projects are stored. Below is a list of notable projects along with summaries of each one.</p>
         </div>
       </div>
 
-      <div class="row">
-        <div class="span4"><a href="https://github.com/khwang/strawberry"><img src="strawberry.png"></a></div>
-        <div class="span8">
-          <h3>Strawberry</h3>
-          <p>An interactive visualizer. Fun times with WebGL and the new pointer lock API. It won third place at the Fall 2012 Berkeley HackJam. Check out a live demo <a href="http://kevinhwang.net/strawberry/index.html">here</a>. Note that it's Chrome only for now--blame vendor prefixes for that. <a href="https://github.com/khwang/strawberry">&#8594;</a></p>
+      <!-- Start the featurettes -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Strawberry</h2>
+          <p class="lead">An interactive visualizer. Fun times with WebGL and the new pointer lock API. It won third place at the Fall 2012 Berkeley HackJam. Check out a live demo <a href="http://kevinhwang.net/strawberry/index.html">here</a>. Note that it's Chrome only for now--blame vendor prefixes for that. <a href="https://github.com/khwang/strawberry">&#8594;</a></p>
+        </div>
+        <div class="col-md-5">
+          <a href="https://github.com/khwang/strawberry"><img src="strawberry.png" class="featurette-image img-responsive img-circle"></a>
         </div>
       </div>
 
-      <div class="row">
-        <div class="span4"><a href="https://github.com/khwang/dragonfruit"><img src="dragonfruit.png"></a></div>
-        <div class="span8">
-          <h3>Dragonfruit</h3>
-          <p>I built this application to learn both Ruby and Rails. It's a game where a picture appears on screen, you copy it, then you and your friends vote for the best imitation. Credit for the idea goes to <a href="http://davidmah.posterous.com/">David Mah</a>. <a href="https://github.com/khwang/dragonfruit">&#8594;</a> </p>
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Dragonfruit</h2>
+          <p class="lead">I built this application to learn both Ruby and Rails. It's a game where a picture appears on screen, you copy it, then you and your friends vote for the best imitation. Credit for the idea goes to <a href="http://davidmah.posterous.com/">David Mah</a>. <a href="https://github.com/khwang/dragonfruit">&#8594;</a> </p>
+        </div>
+        <div class="col-md-5">
+          <a href="https://github.com/khwang/dragonfruit"><img src="dragonfruit.png" class="featurette-image img-responsive img-circle"></a>
         </div>
       </div>
 
@@ -200,7 +216,8 @@
       </div>
 
       <footer>
-        <p>&copy; Kevin Hwang 2011</p>
+      <p>&copy; Kevin Hwang</p>
       </footer>
     </div>
+  </div>
 </html>
