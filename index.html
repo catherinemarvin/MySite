@@ -12,7 +12,20 @@
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script src="jquery.min.js"></script>
-    <script src="bootstrap.min.js"></script>
+    <script src="scrollspy.js"></script>
+
+    <script>
+      $(document).ready(function () {
+
+        var offset = 10;
+
+        $('#navbar li a').click(function(event) {
+          event.preventDefault();
+          $($(this).attr('href'))[0].scrollIntoView();
+          scrollBy(0, -offset);
+        });
+      });
+    </script>
 
     <script type="text/javascript">
       //dat google analytics
@@ -40,9 +53,9 @@
          </button>
          <a class="navbar-brand" href="#">Kevin Hwang</a>
        </div>
-       <div class="navbar-collapse collapse">
+       <div id="navbar" class="navbar-collapse collapse">
          <ul class="nav navbar-nav">
-           <li><a href="#about">Home</a></li>
+           <li><a href="#about">About</a></li>
            <li><a href="#projects">Projects</a></li>
            <li><a href="#contact">Contact</a></li>
          </ul>
@@ -50,9 +63,9 @@
      </div>
    </div>
 
-   <div class="container marketing">
+   <div id="content" class="container marketing">
 
-     <div class="row">
+     <div id="about" class="row">
        <div class="col-lg-12">
          <div class="page-header">
            <h1>About Me
@@ -70,7 +83,7 @@
        </div>
      </div>
 
-     <div class="row">
+     <div id="projects" class="row">
        <div class="col-lg-12">
          <div class="page-header">
            <h1>Projects
@@ -196,12 +209,7 @@
        </div>
      </div>
 
-     <hr class="featurette-divider">
-
-     <br>
-     <br>
-
-     <div class="row">
+     <div id="contact" class="row">
        <div class="col-lg-12">
          <div class="page-header">
            <h1>Contact Me
