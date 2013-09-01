@@ -12,20 +12,7 @@
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script src="jquery.min.js"></script>
-    <script src="scrollspy.js"></script>
-
-    <script>
-      $(document).ready(function () {
-
-        var offset = 10;
-
-        $('#navbar li a').click(function(event) {
-          event.preventDefault();
-          $($(this).attr('href'))[0].scrollIntoView();
-          scrollBy(0, -offset);
-        });
-      });
-    </script>
+    <script src="menubar.js"></script>
 
     <script type="text/javascript">
       //dat google analytics
