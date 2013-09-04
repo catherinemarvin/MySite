@@ -2,205 +2,243 @@
   <head>
     <meta charset="utf-8">
     <title>Kevin Hwang - About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Kevin Hwang's personal website">
-    <meta name="author" content="">
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <meta name="author" content="Kevin Hwang">
+    <link href="bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="master.css" />
     <!--HTML5 shim. Hacky, but fun!-->
     <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="bootstrap-scrollspy.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        $('#topbar').scrollspy()
-      })
-    </script>
+    <script src="jquery.min.js"></script>
+    <script src="menubar.js"></script>
 
     <script type="text/javascript">
       //dat google analytics
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-29616727-1']);
-      _gaq.push(['_trackPageview']);
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29616727-1']);
+    _gaq.push(['_trackPageview']);
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
 
-    </script>
-  </head>
+</script>
+ </head>
 
-  <body data-spy="scroll">
+ <body>
+   <div class="navbar navbar-default navbar-fixed-top">
+     <div class="container">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="#">Kevin Hwang</a>
+       </div>
+       <div id="navbar" class="navbar-collapse collapse">
+         <ul class="nav navbar-nav">
+           <li><a href="#about">About</a></li>
+           <li><a href="#projects">Projects</a></li>
+           <li><a href="#contact">Contact</a></li>
+         </ul>
+       </div>
+     </div>
+   </div>
 
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="#">Kevin Hwang</a>
-          <ul class="nav">
-            <li><a href="#about">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+   <div id="content" class="container marketing">
 
-    <div id="about" class="container">
-      <div class="page-header">
-        <h1>About Me
-          <small>The real deal</small>
-        </h1>
-      </div>
+     <div id="about" class="row">
+       <div class="col-lg-12">
+         <div class="page-header">
+           <h1>About Me
+             <small>The real deal</small>
+           </h1>
+         </div>
+       </div>
+     </div>
 
-      <div class="row">
-        <div class="span12">
-          <p>Hello, I'm Kevin. I'm a programmer specializing in web development. I've just graduated with a degree in Electrical Engineering and Computer Science from the University of California, Berkeley. I'm currently a software engineer at <a href="http://www.scribd.com/">Scribd</a>.</p> 
+     <div class="row">
+       <div class="col-lg-12">
+         <p>Hello, I'm Kevin. I'm a programmer specializing in web development. I've just graduated with a degree in Electrical Engineering and Computer Science from the University of California, Berkeley. I'm currently a software engineer at <a href="http://www.scribd.com/">Scribd</a>.</p> 
 
-          <p>When I'm not coding, you can find me climbing rocks indoors, swing dancing both for fun and for show, drawing, composing, or playing instruments.</p>
-        </div>
-      </div>
+         <p>When I'm not coding, you can find me climbing rocks indoors, swing dancing both for fun and for show, drawing, composing, or playing instruments.</p>
+       </div>
+     </div>
 
-    </div>
-    <br>
-    <br>
-    <div id="projects" class="container">
-      <div class="page-header">
-        <h1>Projects
-          <small>Both big and small</small>
-        </h1>
-      </div>
+     <div id="projects" class="row">
+       <div class="col-lg-12">
+         <div class="page-header">
+           <h1>Projects
+             <small>Both big and small</small>
+           </h1>
+         </div>
+       </div>
+     </div>
 
-      <div class="row">
-        <div class="span12">
-          <p>I have a GitHub <a href="https://github.com/khwang">page</a> on which most of my projects are stored. Below is a list of notable projects along with summaries of each one.</p>
-        </div>
-      </div>
+     <div class="row">
+       <div class="col-lg-12">
+         <p>I have a GitHub <a href="https://github.com/khwang">page</a> on which most of my projects are stored. Below is a list of notable projects along with summaries of each one.</p>
+       </div>
+     </div>
 
-      <div class="row">
-        <div class="span4"><a href="https://github.com/khwang/strawberry"><img src="strawberry.png"></a></div>
-        <div class="span8">
-          <h3>Strawberry</h3>
-          <p>An interactive visualizer. Fun times with WebGL and the new pointer lock API. It won third place at the Fall 2012 Berkeley HackJam. Check out a live demo <a href="http://kevinhwang.net/strawberry/index.html">here</a>. Note that it's Chrome only for now--blame vendor prefixes for that. <a href="https://github.com/khwang/strawberry">&#8594;</a></p>
-        </div>
-      </div>
+     <!-- Start the featurettes -->
 
-      <div class="row">
-        <div class="span4"><a href="https://github.com/khwang/dragonfruit"><img src="dragonfruit.png"></a></div>
-        <div class="span8">
-          <h3>Dragonfruit</h3>
-          <p>I built this application to learn both Ruby and Rails. It's a game where a picture appears on screen, you copy it, then you and your friends vote for the best imitation. Credit for the idea goes to <a href="http://davidmah.posterous.com/">David Mah</a>. <a href="https://github.com/khwang/dragonfruit">&#8594;</a> </p>
-        </div>
-      </div>
+     <hr class="featurette-divider">
 
-      <div class="row">
-        <div class="span4"><a href="https://github.com/khwang/gala"><img src="gala.png"></a></div>
-        <div class="span8">
-          <h3>Gala</h3>
-          <p>Paul Graham asked us to build something cool when we applied for YC for the Summer 2012 batch, so <a href="https://github.com/ajaytripathy">Ajay Tripathy</a> and I built this. Learn to program by commanding an army of robots in space! <a href="https://github.com/khwang/gala">&#8594;</a></p>
-        </div>
-      </div>
+     <div class="row featurette">
+       <div class="col-md-7">
+         <h2 class="featurette-heading">Strawberry</h2>
+         <p class="lead">An interactive visualizer. Fun times with WebGL and the new pointer lock API. It won third place at the Fall 2012 Berkeley HackJam. Check out a live demo <a href="http://kevinhwang.net/strawberry/index.html">here</a>. Note that it's Chrome only for now--blame vendor prefixes for that. <a href="https://github.com/khwang/strawberry">&#8594;</a></p>
+       </div>
+       <div class="col-md-5">
+         <a href="https://github.com/khwang/strawberry"><img src="strawberry.png" alt="Strawberry project logo" class="featurette-image img-responsive img-circle"></a>
+       </div>
+     </div>
 
-      <div class="row">
-        <div class="span4"><a href="https://github.com/khwang/coffee"><img src="coffee.png"></a></div>
-        <div class="span8">
-          <h3>Coffee</h3>
-          <p>A web app for tracking chores, TODOs, and bills within a household. Likely won't be finished since I discovered <a href="http://goodmate.co/">Goodmate</a>, but it was a good exercise in learning Redis. <a href="https://github.com/khwang/coffee">&#8594;</a></p>
-        </div>
-      </div>
+     <hr class="featurette-divider">
 
-      <div class="row">
-        <div class="span4"><a href="https://github.com/khwang/currant"><img src="currant.png"></a></div>
-        <div class="span8">
-          <h3>Read With Us</h3>
-          <p>Upload an epub, then read it together in real time! Comes with a video stream and pretty page turning. <a href="https://github.com/khwang/currant">&#8594;</a></p>
-        </div>
-      </div>
+     <div class="row featurette">
+       <div class="col-md-5">
+         <a href="https://github.com/khwang/dragonfruit"><img src="dragonfruit.png" alt="Dragonfruit project logo" class="featurette-image img-responsive img-circle"></a>
+       </div>
+       <div class="col-md-7">
+         <h2 class="featurette-heading">Dragonfruit</h2>
+         <p class="lead">I built this application to learn both Ruby and Rails. It's a game where a picture appears on screen, you copy it, then you and your friends vote for the best imitation. Credit for the idea goes to <a href="http://davidmah.posterous.com/">David Mah</a>. <a href="https://github.com/khwang/dragonfruit">&#8594;</a> </p>
+       </div>
+     </div>
 
-      <div class="row">
-        <div class="span4"><a href="https://github.com/khwang/MySite"><img src="myself.png"></a></div>
-        <div class="span8">
-          <h3>My Personal Website</h3>
-          <p>How self-referential! This website is the result of me familiarizing myself with Twitter Bootstrap. <a href="https://github.com/khwang/MySite">&#8594;</a></p>
-        </div>
-      </div>
+     <hr class="featurette-divider">
 
-      <div class="row">
-        <div class="span4"><a href="https://github.com/AjayTripathy/kiwi"><img src="writebetterwithus.png"></a></div>
-        <div class="span8">
-          <h3>Write Better With Us</h3>
-          <p>We use natural language processing and machine learning to help people write better. You can save your documents, load them and edit them, and track statistics such as your Flesch-Kincaid readability level. <a href="https://github.com/AjayTripathy/kiwi">&#8594;</a></p>
-        </div>
-      </div>
+     <div class="row featurette">
+       <div class="col-md-7">
+         <h2 class="featurette-heading">Gala</h2>
+         <p class="lead">Paul Graham asked us to build something cool when we applied for YC for the Summer 2012 batch, so <a href="https://github.com/ajaytripathy">Ajay Tripathy</a> and I built this. Learn to program by commanding an army of robots in space! <a href="https://github.com/khwang/gala">&#8594;</a></p>
+       </div>
+       <div class="col-md-5">
+         <a href="https://github.com/khwang/gala"><img src="gala.png" alt="Gala project logo" class="featurette-image img-responsive img-circle"></a>
+       </div>
+     </div>
 
-      <div class="row">
-        <div class="span4"><a href="https://github.com/khwang/djs"><img src="djs.png"></a></div>
-        <div class="span8">
-          <h3>DJS</h3>
-          <p>A real-time media distribution framework built on top of Node and Now. Serve whatever you want with no server-side Javascript necessary on your end. We also bake in support for public subscriptions and groups. <a href="https://github.com/khwang/djs">&#8594;</a></p>
-        </div>
-      </div>
+     <hr class="featurette-divider">
 
-      <div class="row">
-        <div class="span4"><a href="https://github.com/DungFu/Post-Install"><img src="post-install.png"></a></div>
-        <div class="span8">
-          <h3>Post-Install</h3>
-          <p>A bash script to get Mac and Ubuntu computers up and running easily. Configure options and install vital programs without hassle. <a href="https://github.com/DungFu/Post-Install">&#8594;</a></p>
-        </div>
-      </div>
+     <div class="row featurette">
+       <div class="col-md-5">
+         <a href="https://github.com/khwang/coffee"><img src="coffee.png" alt="Coffee project logo" class="featurette-image img-responsive img-circle"></a>
+       </div>
+       <div class="col-md-7">
+         <h2 class="featurette-heading">Coffee</h2>
+         <p class="lead">A web app for tracking chores, TODOs, and bills within a household. Likely won't be finished since I discovered <a href="http://goodmate.co/">Goodmate</a>, but it was a good exercise in learning Redis. <a href="https://github.com/khwang/coffee">&#8594;</a></p>
+       </div>
+     </div>
 
-      <div class="row">
-        <div class="span4"><a href="https://github.com/khwang/Soncoya"><img src="soncoya.png"></a></div>
-        <div class="span8">
-          <h3>Soncoya</h3>
-          <p>A cookbook with an eye on price. Written in Node and Now. It was an experiment in asynchronous programming and designing a single-page website. <a href="https://github.com/khwang/Soncoya">&#8594;</a></p>
-        </div>
-      </div>
+     <hr class="featurette-divider">
 
-      <div class="row">
-        <div class="span4"><a href="https://github.com/khwang/Nowtable"><img src="nowtable.png"></a></div>
-        <div class="span8">
-          <h3>Nowtable</h3>
-          <p>A Turntable.fm clone written in Node.JS and Now.JS. Listen to music together and upload songs for others to hear. <a href="https://github.com/khwang/Nowtable">&#8594;</a></p>
-        </div>
-      </div>
-    </div>
+     <div class="row featurette">
+       <div class="col-md-7">
+         <h2 class="featurette-heading">Read With Us</h2>
+         <p class="lead">Upload an epub, then read it together in real time! Comes with a video stream and pretty page turning. <a href="https://github.com/khwang/currant">&#8594;</a></p>
+       </div>
+       <div class="col-md-5">
+         <a href="https://github.com/khwang/currant"><img src="currant.png" alt="Currant project logo" class="featurette-image img-responsive img-circle"></a>
+       </div>
+     </div>
 
-    <br>
-    <br>
+     <hr class="featurette-divider">
 
-    <div id="contact" class="container">
-      <div class="page-header">
-        <h1>Contact Me
-          <small>I'm not contagious</small>
-        </h1>
-      </div>
+     <div class="row featurette">
+       <div class="col-md-5">
+         <a href="https://github.com/khwang/MySite"><img src="myself.png" alt="My site logo" class="featurette-image img-responsive img-circle"></a>
+       </div>
+       <div class="col-md-7">
+         <h2 class="featurette-heading">My Personal Website</h2>
+         <p class="lead">How self-referential! This website is the result of me familiarizing myself with Twitter Bootstrap. <a href="https://github.com/khwang/MySite">&#8594;</a></p>
+       </div>
+     </div>
 
-      <div class="row">
-        <div class="span12">
-          <p>You can reach me through a myriad of ways. Choose any and all that are convenient for you.</p>
+     <hr class="featurette-divider">
 
+     <div class="row featurette">
+       <div class="col-md-7">
+         <h2 class="featurette-heading" >Write Better With Us</h2>
+         <p class="lead">We use natural language processing and machine learning to help people write better. You can save your documents, load them and edit them, and track statistics such as your Flesch-Kincaid readability level. <a href="https://github.com/AjayTripathy/kiwi">&#8594;</a></p>
+       </div>
+       <div class="col-md-5">
+         <a href="https://github.com/AjayTripathy/kiwi"><img src="writebetterwithus.png" alt="Write Better With Us logo" class="featurette-image img-responsive img-circle"></a>
+       </div>
+     </div>
 
-          <ul>
-            <li><a href="https://www.facebook.com/k3vinhwang">Facebook</a></li>
-            <li><a href="http://www.linkedin.com/in/k3vinhwang">LinkedIn</a></li>
-            <li><a href="https://twitter.com/#!/k3vinhwang">Twitter</a></li>
-            <li><a href="https://plus.google.com/115680152090000837531/">Google Plus</a></li>
-            <li><a href="mailto:k3vinhwang@gmail.com">E-mail</a></li>
+     <hr class="featurette-divider">
 
-          </ul>
+     <div class="row featurette">
+       <div class="col-md-5">
+         <a href="https://github.com/khwang/djs"><img src="djs.png" alt="DJS logo" class="featurette-image img-responsive img-circle"></a>
+       </div>
+       <div class="col-md-7">
+         <h2 class="featurette-heading">DJS</h2>
+         <p class="lead">A real-time media distribution framework built on top of Node and Now. Serve whatever you want with no server-side Javascript necessary on your end. We also bake in support for public subscriptions and groups. <a href="https://github.com/khwang/djs">&#8594;</a></p>
+       </div>
+     </div>
 
+     <hr class="featurette-divider">
 
-          <p>I also have a resume available as a <a href="resume/resume.pdf">PDF</a>.</p>
+     <div class="row featurette">
+       <div class="col-md-7">
+         <h2 class="featurette-heading">Nowtable</h2>
+         <p class="lead">A Turntable.fm clone written in Node.JS and Now.JS. Listen to music together and upload songs for others to hear. <a href="https://github.com/khwang/Nowtable">&#8594;</a></p>
+       </div>
+       <div class="col-md-5">
+         <a href="https://github.com/khwang/Nowtable"><img src="nowtable.png" alt="Nowtable logo" class="featurette-image img-responsive img-circle"></a>
+       </div>
+     </div>
 
-        </div>
-      </div>
+     <div id="contact" class="row">
+       <div class="col-lg-12">
+         <div class="page-header">
+           <h1>Contact Me
+             <small>I'm not contagious</small>
+           </h1>
+         </div>
+       </div>
+     </div>
 
-      <footer>
-        <p>&copy; Kevin Hwang 2011</p>
-      </footer>
-    </div>
+     <div class="row">
+       <div class="col-lg-12">
+         <p>You can reach me through a myriad of ways. Choose any and all that are convenient for you.</p>
+       </div>
+     </div>
+
+     <hr class="featurette-divider">
+
+     <div class="row">
+       <div class="col-lg-4">
+         <a href="https://www.facebook.com/k3vinhwang"><img src="facebook.png" alt="Facebook logo" class="img-circle"></a>
+       </div>
+       <div class="col-lg-4">
+         <a href="http://www.linkedin.com/in/k3vinhwang"><img src="linkedin.png" alt="LinkedIn logo" class="img-circle"></a>
+       </div>
+       <div class="col-lg-4">
+         <a href="https://twitter.com/#!/k3vinhwang"><img src="twitter.png" alt="Twitter logo" class="img-circle"></a>
+       </div>
+     </div>
+
+     <div class="row">
+       <div class="col-lg-4">
+         <a href="https://plus.google.com/115680152090000837531/"><img src="googleplus.png" alt="Google+ logo" class="img-circle"></a>
+       </div>
+       <div class="col-lg-4">
+         <a href="mailto:k3vinhwang@gmail.com"><img src="email.png" alt="Email logo" class="img-circle"></a>
+       </div>
+     </div>
+
+     <hr class="featurette-divider">
+
+     <p>I also have a resume available as a <a href="resume/resume.pdf">PDF</a>.</p>
+
+   </div>
+ </body>
 </html>
