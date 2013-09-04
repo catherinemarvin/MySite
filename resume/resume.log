@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  29 AUG 2013 23:00
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  3 SEP 2013 23:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1032,7 +1032,7 @@ Package rerunfilecheck Info: File `resume.out' has not changed.
 Here is how much of TeX's memory you used:
  21631 strings out of 493633
  378896 string characters out of 3143378
- 509184 words of memory out of 3000000
+ 509180 words of memory out of 3000000
  24482 multiletter control sequences out of 15000+200000
  57536 words of font info for 66 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
@@ -1047,7 +1047,7 @@ pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/lm/lmro17.pfb></usr/
 local/texlive/2011/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texl
 ive/2011/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2011/t
 exmf-dist/fonts/type1/public/marvosym/marvosym.pfb>
-Output written on resume.pdf (1 page, 206029 bytes).
+Output written on resume.pdf (1 page, 206024 bytes).
 PDF statistics:
  88 PDF objects out of 1000 (max. 8388607)
  73 compressed objects within 1 object stream
