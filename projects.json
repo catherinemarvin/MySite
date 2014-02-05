@@ -1,0 +1,38 @@
+var projects = [
+{ name: "Strawberry",
+  description: "An interactive visualizer. Fun times with WebGL and the new pointer lock API. It won third place at the Fall 2012 Berkeley HackJam. Check out a live demo <a href='http://kevinhwang.net/strawberry/index.html'>here</a>. Note that it's Chrome only for now--blame vendor prefixes for that.",
+  link: "https://github.com/khwang/strawberry"
+},
+{ name: "Dragonfruit",
+  description: "I built this application to learn both Ruby and Rails. It's a game where a picture appears on screen, you copy it, then you and your friends vote for the best imitation. Credit for the idea goes to <a href='http://davidmah.posterous.com/'>David Mah</a>.",
+  link: "https://github.com/khwang/dragonfruit"
+},
+{ name: "Gala",
+  description: "Paul Graham asked us to build something cool when we applied for YC for the Summer 2012 batch, so <a href='https://github.com/ajaytripathy'>Ajay Tripathy</a> and I built this. Learn to program by commanding an army of robots in space!",
+  link: "https://github.com/khwang/gala"
+},
+{ name: "Coffee",
+  description: "A web app for tracking chores, TODOs, and bills within a household. Likely won't be finished since I discovered <a href='http://goodmate.co/'>Goodmate</a>, but it was a good exercise in learning Redis.",
+  link: "https://github.com/khwang/coffee"
+},
+{ name: "Read With Us",
+  description: "Upload an epub, then read it together in real time! Comes with a video stream and pretty page turning.",
+  link: "https://github.com/khwang/currant"
+},
+{ name: "My Personal Website",
+  description: "How self-referential! This website is the result of me familiarizing myself with Twitter Bootstrap.",
+  link: "https://github.com/khwang/MySite"
+},
+{ name: "Write Better With Us",
+  description: "We use natural language processing and machine learning to help people write better. You can save your documents, load them and edit them, and track statistics such as your Flesch-Kincaid readability level.",
+  link: "https://github.com/AjayTripathy/kiwi"
+},
+{ name: "DJS",
+  description: "A real-time media distribution framework built on top of Node and Now. Serve whatever you want with no server-side Javascript necessary on your end. We also bake in support for public subscriptions and groups.",
+  link: "https://github.com/khwang/djs"
+},
+{ name: "Nowtable",
+  description: "A Turntable.fm clone written in Node.JS and Now.JS. Listen to music together and upload songs for others to hear.",
+  link: "https://github.com/khwang/Nowtable"
+},
+];

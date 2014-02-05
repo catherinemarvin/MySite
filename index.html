@@ -15,7 +15,7 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/underscore-min.js"></script>
-    <script src="ks/menubar.js"></script>
+    <script src="js/menubar.js"></script>
 
     <script type="text/javascript">
       //dat google analytics
@@ -29,175 +29,120 @@
      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
      })();
 
-</script>
- </head>
+    </script>
 
- <body>
-   <div class="navbar navbar-default navbar-fixed-top">
-     <div class="container">
-       <div class="navbar-header">
-         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-           <span class="icon-bar"></span>
-           <span class="icon-bar"></span>
-           <span class="icon-bar"></span>
-         </button>
-         <a class="navbar-brand" href="#">Kevin Hwang</a>
-       </div>
-       <div id="navbar" class="navbar-collapse collapse">
-         <ul class="nav navbar-nav">
-           <li><a href="#about">About</a></li>
-           <li><a href="#projects">Projects</a></li>
-           <li><a href="#contact">Contact</a></li>
-         </ul>
-       </div>
-     </div>
-   </div>
+    <script src="projects.json"></script>
+    <script>
+      $(document).ready(function () {
+        var leftTemplate = $("#leftImageProject").html();
+        var rightTemplate = $("#rightImageProject").html();
 
-   <div id="content" class="container marketing">
+        var templates = {
+          leftTemplate: leftTemplate,
+          rightTemplate: rightTemplate
+        }
 
-     <div id="about" class="row">
-       <div class="col-lg-12">
-         <div class="page-header">
-           <h1>About Me
-             <small>The real deal</small>
-           </h1>
-         </div>
-       </div>
-     </div>
+        for (var i = 0; i < projects.length; i++) {
+          var projectInfo = projects[i];
+          var side = i % 2 === 0 ? "left" : "right"
+          var template = templates[side+"Template"];
+          $("#projectList").append(_.template(template, projectInfo));
+          if (i != projects.length - 1) {
+            $("#projectList").append("<hr class='featurette-divider'>");
+          }
+        }
+      });
+    </script>
+  </head>
 
-     <div class="row">
-       <div class="col-lg-12">
-         <p>Hello, I'm Kevin. I'm a programmer specializing in web development. I'm currently a software engineer at <a href="http://www.scribd.com/">Scribd</a>.</p> 
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Kevin Hwang</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-         <p>When I'm not coding, you can find me swing dancing both for fun and for show, <a href="http://drawingright.tumblr.com">drawing</a>, composing, or playing instruments. I can also be found swing DJing at times.</p>
-       </div>
-     </div>
+    <div id="content" class="container marketing">
 
-     <div id="projects" class="row">
-       <div class="col-lg-12">
-         <div class="page-header">
-           <h1>Projects
-             <small>Both big and small</small>
-           </h1>
-         </div>
-       </div>
-     </div>
+      <div id="about" class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h1>About Me
+              <small>The real deal</small>
+            </h1>
+          </div>
+        </div>
+      </div>
 
-     <div class="row">
-       <div class="col-lg-12">
-         <p>I have a GitHub <a href="https://github.com/khwang">page</a> on which most of my projects are stored. Below is a list of notable projects along with summaries of each one.</p>
-       </div>
-     </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Hello, I'm Kevin. I'm a programmer specializing in web development. I'm currently a software engineer at <a href="http://www.scribd.com/">Scribd</a>.</p> 
 
-     <!-- Start the featurettes -->
+          <p>When I'm not coding, you can find me swing dancing both for fun and for show, <a href="http://drawingright.tumblr.com">drawing</a>, composing, or playing instruments. I can also be found swing DJing at times.</p>
+        </div>
+      </div>
 
-     <hr class="featurette-divider">
+      <div id="projects" class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h1>Projects
+              <small>Both big and small</small>
+            </h1>
+          </div>
+        </div>
+      </div>
 
-     <div class="row featurette">
-       <div class="col-md-7">
-         <h2 class="featurette-heading">Strawberry</h2>
-         <p class="lead">An interactive visualizer. Fun times with WebGL and the new pointer lock API. It won third place at the Fall 2012 Berkeley HackJam. Check out a live demo <a href="http://kevinhwang.net/strawberry/index.html">here</a>. Note that it's Chrome only for now--blame vendor prefixes for that. <a href="https://github.com/khwang/strawberry">&#8594;</a></p>
-       </div>
-       <div class="col-md-5">
-         <a href="https://github.com/khwang/strawberry"><img src="strawberry.png" alt="Strawberry project logo" class="featurette-image img-responsive img-circle"></a>
-       </div>
-     </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <p>I have a GitHub <a href="https://github.com/khwang">page</a> on which most of my projects are stored. Below is a list of notable projects along with summaries of each one.</p>
+        </div>
+      </div>
 
-     <hr class="featurette-divider">
+      <!-- Start the featurettes -->
 
-     <div class="row featurette">
-       <div class="col-md-5">
-         <a href="https://github.com/khwang/dragonfruit"><img src="dragonfruit.png" alt="Dragonfruit project logo" class="featurette-image img-responsive img-circle"></a>
-       </div>
-       <div class="col-md-7">
-         <h2 class="featurette-heading">Dragonfruit</h2>
-         <p class="lead">I built this application to learn both Ruby and Rails. It's a game where a picture appears on screen, you copy it, then you and your friends vote for the best imitation. Credit for the idea goes to <a href="http://davidmah.posterous.com/">David Mah</a>. <a href="https://github.com/khwang/dragonfruit">&#8594;</a> </p>
-       </div>
-     </div>
+      <hr class="featurette-divider">
 
-     <hr class="featurette-divider">
+      <!-- Project template -->
 
-     <div class="row featurette">
-       <div class="col-md-7">
-         <h2 class="featurette-heading">Gala</h2>
-         <p class="lead">Paul Graham asked us to build something cool when we applied for YC for the Summer 2012 batch, so <a href="https://github.com/ajaytripathy">Ajay Tripathy</a> and I built this. Learn to program by commanding an army of robots in space! <a href="https://github.com/khwang/gala">&#8594;</a></p>
-       </div>
-       <div class="col-md-5">
-         <a href="https://github.com/khwang/gala"><img src="gala.png" alt="Gala project logo" class="featurette-image img-responsive img-circle"></a>
-       </div>
-     </div>
+      <script type="text/html" id="rightImageProject">
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading"> <%= name %></h2>
+            <p class="lead"><%= description %> <a href='<%= link %>'>&#8594;</a></p>
+          </div>
+          <div class="col-md-5">
+            <a href="<%= link %>"><img src="images/<%= name.replace(/ /g,"") %>.png" alt="<%= name %> project logo" class="featurette-image img-responsive img-circle"></a>
+          </div>
+        </div>
+      </script>
 
-     <hr class="featurette-divider">
+      <script type="text/html" id="leftImageProject">
+        <div class="row featurette">
+          <div class="col-md-5">
+            <a href="<%= link %>"><img src="images/<%= name.replace(/ /g,"") %>.png" alt="<%= name %> project logo" class="featurette-image img-responsive img-circle"></a>
+          </div>
+          <div class="col-md-7">
+            <h2 class="featurette-heading"> <%= name %></h2>
+            <p class="lead"><%= description %> <a href='<%= link %>'>&#8594;</a></p>
+          </div>
+        </div>
+      </script>
 
-     <div class="row featurette">
-       <div class="col-md-5">
-         <a href="https://github.com/khwang/coffee"><img src="coffee.png" alt="Coffee project logo" class="featurette-image img-responsive img-circle"></a>
-       </div>
-       <div class="col-md-7">
-         <h2 class="featurette-heading">Coffee</h2>
-         <p class="lead">A web app for tracking chores, TODOs, and bills within a household. Likely won't be finished since I discovered <a href="http://goodmate.co/">Goodmate</a>, but it was a good exercise in learning Redis. <a href="https://github.com/khwang/coffee">&#8594;</a></p>
-       </div>
-     </div>
-
-     <hr class="featurette-divider">
-
-     <div class="row featurette">
-       <div class="col-md-7">
-         <h2 class="featurette-heading">Read With Us</h2>
-         <p class="lead">Upload an epub, then read it together in real time! Comes with a video stream and pretty page turning. <a href="https://github.com/khwang/currant">&#8594;</a></p>
-       </div>
-       <div class="col-md-5">
-         <a href="https://github.com/khwang/currant"><img src="currant.png" alt="Currant project logo" class="featurette-image img-responsive img-circle"></a>
-       </div>
-     </div>
-
-     <hr class="featurette-divider">
-
-     <div class="row featurette">
-       <div class="col-md-5">
-         <a href="https://github.com/khwang/MySite"><img src="myself.png" alt="My site logo" class="featurette-image img-responsive img-circle"></a>
-       </div>
-       <div class="col-md-7">
-         <h2 class="featurette-heading">My Personal Website</h2>
-         <p class="lead">How self-referential! This website is the result of me familiarizing myself with Twitter Bootstrap. <a href="https://github.com/khwang/MySite">&#8594;</a></p>
-       </div>
-     </div>
-
-     <hr class="featurette-divider">
-
-     <div class="row featurette">
-       <div class="col-md-7">
-         <h2 class="featurette-heading" >Write Better With Us</h2>
-         <p class="lead">We use natural language processing and machine learning to help people write better. You can save your documents, load them and edit them, and track statistics such as your Flesch-Kincaid readability level. <a href="https://github.com/AjayTripathy/kiwi">&#8594;</a></p>
-       </div>
-       <div class="col-md-5">
-         <a href="https://github.com/AjayTripathy/kiwi"><img src="writebetterwithus.png" alt="Write Better With Us logo" class="featurette-image img-responsive img-circle"></a>
-       </div>
-     </div>
-
-     <hr class="featurette-divider">
-
-     <div class="row featurette">
-       <div class="col-md-5">
-         <a href="https://github.com/khwang/djs"><img src="djs.png" alt="DJS logo" class="featurette-image img-responsive img-circle"></a>
-       </div>
-       <div class="col-md-7">
-         <h2 class="featurette-heading">DJS</h2>
-         <p class="lead">A real-time media distribution framework built on top of Node and Now. Serve whatever you want with no server-side Javascript necessary on your end. We also bake in support for public subscriptions and groups. <a href="https://github.com/khwang/djs">&#8594;</a></p>
-       </div>
-     </div>
-
-     <hr class="featurette-divider">
-
-     <div class="row featurette">
-       <div class="col-md-7">
-         <h2 class="featurette-heading">Nowtable</h2>
-         <p class="lead">A Turntable.fm clone written in Node.JS and Now.JS. Listen to music together and upload songs for others to hear. <a href="https://github.com/khwang/Nowtable">&#8594;</a></p>
-       </div>
-       <div class="col-md-5">
-         <a href="https://github.com/khwang/Nowtable"><img src="nowtable.png" alt="Nowtable logo" class="featurette-image img-responsive img-circle"></a>
-       </div>
-     </div>
+     <div id="projectList"></div>
 
      <div id="contact" class="row">
        <div class="col-lg-12">
@@ -243,9 +188,7 @@
      </div>
 
      <hr class="featurette-divider">
-
      <p>I also have a resume available as a <a href="resume/resume.pdf">PDF</a>.</p>
-
    </div>
  </body>
 </html>
