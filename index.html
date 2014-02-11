@@ -44,9 +44,24 @@
 
         for (var i = 0; i < projects.length; i++) {
           var projectInfo = projects[i];
-          var side = i % 2 === 0 ? "left" : "right"
-          var template = templates[side+"Template"];
-          $("#projectList").append(_.template(template, projectInfo));
+          var $imageTemplate = $("#projectImage").html();
+          var $descriptionTemplate = $("#projectDescription").html();
+
+          var addString = "<div class='row featurette'>";
+
+          if (i % 2 === 0) { // left
+            addString += _.template($imageTemplate, projectInfo)
+            addString += _.template($descriptionTemplate, projectInfo);
+          }
+          else {
+            addString += _.template($descriptionTemplate, projectInfo);
+            addString += _.template($imageTemplate, projectInfo);
+          }
+
+          addString += "</div>";
+
+          $("#projectList").append(addString);
+
           if (i != projects.length - 1) {
             $("#projectList").append("<hr class='featurette-divider'>");
           }
@@ -116,29 +131,18 @@
 
       <hr class="featurette-divider">
 
-      <!-- Project template -->
+      <!-- Project templates -->
 
-      <script type="text/html" id="rightImageProject">
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading"> <%= name %></h2>
-            <p class="lead"><%= description %> <a href='<%= link %>'>&#8594;</a></p>
-          </div>
-          <div class="col-md-5">
-            <a href="<%= link %>"><img src="images/projects/<%= name.replace(/ /g,"").toLowerCase() %>.png" alt="<%= name %> project logo" class="featurette-image img-responsive img-circle"></a>
-          </div>
+      <script type="text/html" id="projectDescription">
+        <div class="col-md-7">
+          <h2 class="featurette-heading"> <%= name %></h2>
+          <p class="lead"><%= description %> <a href='<%= link %>'>&#8594;</a></p>
         </div>
       </script>
 
-      <script type="text/html" id="leftImageProject">
-        <div class="row featurette">
-          <div class="col-md-5">
-            <a href="<%= link %>"><img src="images/projects/<%= name.replace(/ /g,"").toLowerCase() %>.png" alt="<%= name %> project logo" class="featurette-image img-responsive img-circle"></a>
-          </div>
-          <div class="col-md-7">
-            <h2 class="featurette-heading"> <%= name %></h2>
-            <p class="lead"><%= description %> <a href='<%= link %>'>&#8594;</a></p>
-          </div>
+      <script type="text/html" id="projectImage">
+        <div class="col-md-5">
+          <a href="<%= link %>"><img src="images/projects/<%= name.replace(/ /g,"").toLowerCase() %>.png" alt="<%= name %> project logo" class="featurette-image img-responsive img-circle"></a>
         </div>
       </script>
 
@@ -186,7 +190,6 @@
          <a href="http://www.last.fm/user/k3vinhwang"><img src="images/contact/lastfm.png" alt="Lastfm logo" class="img-circle"></a>
        </div>
      </div>
-
      <hr class="featurette-divider">
      <p>I also have a resume available as a <a href="resume/resume.pdf">PDF</a>.</p>
    </div>
