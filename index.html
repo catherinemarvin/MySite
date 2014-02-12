@@ -34,14 +34,6 @@
     <script src="projects.json"></script>
     <script>
       $(document).ready(function () {
-        var leftTemplate = $("#leftImageProject").html();
-        var rightTemplate = $("#rightImageProject").html();
-
-        var templates = {
-          leftTemplate: leftTemplate,
-          rightTemplate: rightTemplate
-        }
-
         for (var i = 0; i < projects.length; i++) {
           var projectInfo = projects[i];
           var $imageTemplate = $("#projectImage").html();
@@ -53,7 +45,7 @@
             addString += _.template($imageTemplate, projectInfo)
             addString += _.template($descriptionTemplate, projectInfo);
           }
-          else {
+          else { // right
             addString += _.template($descriptionTemplate, projectInfo);
             addString += _.template($imageTemplate, projectInfo);
           }
