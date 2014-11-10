@@ -1,3 +1,6 @@
 [submodule "strawberry"]
 	path = strawberry
 	url = git@github.com:khwang/strawberry.git
+[submodule "musicality-lecture"]
+	path = musicality-lecture
+	url = git@github.com:khwang/musicality-lecture.git
