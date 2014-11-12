@@ -1,189 +1,23 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Kevin Hwang - About</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kevin Hwang's personal website">
-    <meta name="author" content="Kevin Hwang">
-    <link rel="stylesheet" href="css/bootstrap.min.css" >
-    <link rel="stylesheet" href="css/master.css" />
+---
+layout: default
+---
 
-    <!--HTML5 shim. Hacky, but fun!-->
-    <!--[if lt IE 9]>
-    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+<div class="home">
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/underscore-min.js"></script>
-    <script src="js/menubar.js"></script>
+  <h1 class="page-heading">Posts</h1>
 
-    <script type="text/javascript">
-      //dat google analytics
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-29616727-1']);
-    _gaq.push(['_trackPageview']);
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-    (function() {
-     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-     })();
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-    </script>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-    <script src="projects.json"></script>
-    <script>
-      $(document).ready(function () {
-        for (var i = 0; i < projects.length; i++) {
-          var projectInfo = projects[i];
-          var $imageTemplate = $("#projectImage").html();
-          var $descriptionTemplate = $("#projectDescription").html();
-
-          var addString = "<div class='row featurette'>";
-
-          if (i % 2 === 0) { // left
-            addString += _.template($imageTemplate, projectInfo)
-            addString += _.template($descriptionTemplate, projectInfo);
-          }
-          else { // right
-            addString += _.template($descriptionTemplate, projectInfo);
-            addString += _.template($imageTemplate, projectInfo);
-          }
-
-          addString += "</div>";
-
-          $("#projectList").append(addString);
-
-          if (i != projects.length - 1) {
-            $("#projectList").append("<hr class='featurette-divider'>");
-          }
-        }
-      });
-    </script>
-  </head>
-
-  <body>
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Kevin Hwang</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div id="content" class="container marketing">
-
-      <div id="about" class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1>About Me
-              <small>The real deal</small>
-            </h1>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-12">
-          <p>Hello, I'm Kevin. I'm a programmer specializing in web development. I'm currently a software engineer at <a href="http://www.scribd.com/">Scribd</a>.</p> 
-
-          <p>When I'm not coding, you can find me swing dancing both for fun and for show, <a href="http://drawingright.tumblr.com">drawing</a>, composing, or playing instruments. I can also be found swing DJing at times.</p>
-        </div>
-      </div>
-
-      <div id="projects" class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1>Projects
-              <small>Both big and small</small>
-            </h1>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-12">
-          <p>I have a GitHub <a href="https://github.com/khwang">page</a> on which most of my projects are stored. Below is a list of notable projects along with summaries of each one.</p>
-        </div>
-      </div>
-
-      <!-- Start the featurettes -->
-
-      <hr class="featurette-divider">
-
-      <!-- Project templates -->
-
-      <script type="text/html" id="projectDescription">
-        <div class="col-md-7">
-          <h2 class="featurette-heading"> <%= name %></h2>
-          <p class="lead"><%= description %> <a href='<%= link %>'>&#8594;</a></p>
-        </div>
-      </script>
-
-      <script type="text/html" id="projectImage">
-        <div class="col-md-5">
-          <a href="<%= link %>"><img src="images/projects/<%= name.replace(/ /g,"").toLowerCase() %>.png" alt="<%= name %> project logo" class="featurette-image img-responsive img-circle"></a>
-        </div>
-      </script>
-
-     <div id="projectList"></div>
-
-     <div id="contact" class="row">
-       <div class="col-lg-12">
-         <div class="page-header">
-           <h1>Contact Me
-             <small>I'm not contagious</small>
-           </h1>
-         </div>
-       </div>
-     </div>
-
-     <div class="row">
-       <div class="col-lg-12">
-         <p>You can reach me through a myriad of ways. Choose any and all that are convenient for you.</p>
-       </div>
-     </div>
-
-     <hr class="featurette-divider">
-
-     <div class="row">
-       <div class="col-lg-4">
-         <a href="https://www.facebook.com/k3vinhwang"><img src="images/contact/facebook.png" alt="Facebook logo" class="img-circle"></a>
-       </div>
-       <div class="col-lg-4">
-         <a href="http://www.linkedin.com/in/k3vinhwang"><img src="images/contact/linkedin.png" alt="LinkedIn logo" class="img-circle"></a>
-       </div>
-       <div class="col-lg-4">
-         <a href="https://twitter.com/#!/k3vinhwang"><img src="images/contact/twitter.png" alt="Twitter logo" class="img-circle"></a>
-       </div>
-     </div>
-
-     <div class="row">
-       <div class="col-lg-4">
-         <a href="https://plus.google.com/115680152090000837531/"><img src="images/contact/googleplus.png" alt="Google+ logo" class="img-circle"></a>
-       </div>
-       <div class="col-lg-4">
-         <a href="mailto:k3vinhwang@gmail.com"><img src="images/contact/email.png" alt="Email logo" class="img-circle"></a>
-       </div>
-
-       <div class="col-lg-4">
-         <a href="http://www.last.fm/user/k3vinhwang"><img src="images/contact/lastfm.png" alt="Lastfm logo" class="img-circle"></a>
-       </div>
-     </div>
-     <hr class="featurette-divider">
-     <p>I also have a resume available as a <a href="resume/resume.pdf">PDF</a>.</p>
-   </div>
- </body>
-</html>
+</div>
